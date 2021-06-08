@@ -1,5 +1,6 @@
-let sum = 0;
-for (let i = 2; i < process.argv.length; i++) {
-    sum += +process.argv[i];
-}
-console.log(sum);
+let x = process.argv.reduce(function (total, current, index) {
+    if (index >= 2) {
+        return total + (+current);
+    } else return 0;
+});
+console.log(x);
